@@ -1,0 +1,136 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --low-opacity-cyan: hsla(178, 100%, 50%, 0.291);
+    --main-dark-blue: hsl(217, 54%, 11%);
+    --card-dark-blue: hsl(216, 50%, 16%);
+    --separator-dark-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--main-dark-blue);
+}
+
+.main {
+    width: 90%;
+    max-width: 350px;
+    padding: 1.2em;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: .8em;
+    background-color: var(--card-dark-blue);
+}
+
+.main__image-container {
+    position: relative;
+}
+
+.main__hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: calc(100% - 5px);
+    width: 100%;
+    opacity: 0;
+    border-radius: .5em;
+    background-color: var(--low-opacity-cyan);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.main__hover:hover {
+    opacity: 1;
+}
+
+.main__image {
+    width: 100%;
+    border-radius: .5em;
+}
+
+.main__title {
+    margin-block: .5em;
+    color: var(--white);
+}
+
+.main__paragraph {
+    margin-block: .5em;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+.main__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__cost,
+.main__time {
+    display: flex;
+    align-items: center;
+    gap: .2em;
+    margin-block: .5em;
+}
+
+.main__cost {
+    color: var(--cyan);
+}
+
+.main__time {
+    color: var(--soft-blue);
+}
+
+.main__separator {
+    border: none;
+    border-bottom: 0.2px solid var(--separator-dark-blue);
+}
+
+.main__creator {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.main__creator-image {
+    width: 2em;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.main__paragraph--bold {
+    font-weight: 400;
+    color: var(--white);
+}
+
+.main__paragraph--hover {
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.main__paragraph--hover:hover {
+    color: var(--cyan);
+}
+
+.footer__text {
+    color: var(--white);
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--cyan);
+}
